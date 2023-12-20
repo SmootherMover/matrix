@@ -12,11 +12,83 @@
 <body>
    <div id="title-div"><img id="matrix-icon" src="https://cdn-icons-png.flaticon.com/512/4872/4872162.png"><p id="title">Matrix Calculator</p></div>
    <div id="operation-selector">
-        <button class="buttons">Addition</button>
-        <button class="buttons">Subtraction</button>
-        <button class="buttons">Dot Product</button>
-        <button class="buttons">Cross Product</button>
-        <button class="buttons">Determinant</button>
+        <button class="button">Addition</button>
+        <button class="button">Subtraction</button>
+        <button class="button">Dot Product</button>
+        <button class="button">Cross Product</button>
+        <button class="button">Determinant</button>
+   </div>
+   <div id="main-content">
+        <div id="matrix-1">
+            <div style="position: relative;">
+            <div id="left-bracket"></div>
+            <div id="left-top-bracket"></div>
+            <div id="left-bottom-bracket"></div>
+            <table id="editableGrid">
+                <tbody>
+                  <tr>
+                    <td ><input type="text" name="cell_1_1"></td>
+                    <td><input type="text" name="cell_1_2"></td>
+                    
+                    <!-- Add more cells as needed -->
+                  </tr>
+                  <tr>
+                    <td><input type="text" name="cell_2_1"></td>
+                    <td><input type="text" name="cell_2_2"></td>
+                    <!-- Add more cells as needed -->
+                  </tr>
+                  <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+                <div id="column-buttons">
+                    <button class="matrix-buttons" onclick="deleteColumn()">-</button>
+                    <button class="matrix-buttons" onclick="addColumn()">+</button>
+                </div>
+                <div id="row-buttons">
+                    <button class="matrix-buttons" onclick="deleteRow()">-</button>
+                    <button class="matrix-buttons" onclick="addRow()">+</button>
+                </div>
+            <div id="right-bracket"></div>
+            <div id="right-top-bracket"></div>
+            <div id="right-bottom-bracket"></div>
+            </div>
+        </div>
+        <div id="matrix-2">
+            <div style="position: relative;">
+            <div id="left-bracket"></div>
+            <div id="left-top-bracket"></div>
+            <div id="left-bottom-bracket"></div>
+            <table id="editableGrid">
+                <tbody>
+                  <tr>
+                    <td ><input type="text" name="cell_1_1"></td>
+                    <td><input type="text" name="cell_1_2"></td>
+                    
+                    <!-- Add more cells as needed -->
+                  </tr>
+                  <tr>
+                    <td><input type="text" name="cell_2_1"></td>
+                    <td><input type="text" name="cell_2_2"></td>
+                    <!-- Add more cells as needed -->
+                  </tr>
+                  <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+                <div id="column-buttons">
+                    <button class="matrix-buttons" onclick="deleteColumn()">-</button>
+                    <button class="matrix-buttons" onclick="addColumn()">+</button>
+                </div>
+                <div id="row-buttons">
+                    <button class="matrix-buttons" onclick="deleteRow()">-</button>
+                    <button class="matrix-buttons" onclick="addRow()">+</button>
+                </div>
+            <div id="right-bracket"></div>
+            <div id="right-top-bracket"></div>
+            <div id="right-bottom-bracket"></div>
+            </div>
+        </div>
+        
+        
    </div>
 
 </body>
