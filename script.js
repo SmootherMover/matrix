@@ -14,21 +14,21 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  function addColumn() {
-    var table = document.getElementById('editableGrid');
+  function addColumn(gridnumber) {
+    var table = document.getElementById('matrix-' + gridnumber + '-grid');
 
     // Add cells to each existing row
     for (var i = 0; i < table.rows.length; i++) {
       var cell = table.rows[i].insertCell(-1);
       var input = document.createElement('input');
       input.type = 'text';
-      input.name = 'cell_' + i + '_' + table.rows[i].cells.length;
+      input.name = 'cell_' + gridnumber + '_' + i + '_' + table.rows[i].cells.length;
       cell.appendChild(input);
     }
   }
 
-  function addRow() {
-    var table = document.getElementById('editableGrid');
+  function addRow(gridnumber) {
+    var table = document.getElementById('matrix-' + gridnumber + '-grid');
     var rowIndex = table.rows.length;
 
     // Add a new row
@@ -39,13 +39,13 @@ document.addEventListener('DOMContentLoaded', function() {
       var cell = row.insertCell(-1);
       var input = document.createElement('input');
       input.type = 'text';
-      input.name = 'cell_' + rowIndex + '_' + i;
+      input.name = 'cell_' + gridnumber + '_'  + rowIndex + '_' + i;
       cell.appendChild(input);
     }
   }
 
-  function deleteColumn() {
-    var table = document.getElementById('editableGrid');
+  function deleteColumn(gridnumber) {
+    var table = document.getElementById('matrix-' + gridnumber + '-grid');
 
     // Don't delete if there's only one column
     if (table.rows[0].cells.length > 1) {
@@ -56,8 +56,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  function deleteRow() {
-    var table = document.getElementById('editableGrid');
+  function deleteRow(gridnumber) {
+    var table = document.getElementById('matrix-' + gridnumber + '-grid');
 
     // Don't delete if there's only one row
     if (table.rows.length > 1) {

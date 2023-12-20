@@ -24,63 +24,64 @@
             <div id="left-bracket"></div>
             <div id="left-top-bracket"></div>
             <div id="left-bottom-bracket"></div>
-            <table id="editableGrid">
+            <table id="matrix-1-grid">
                 <tbody>
                   <tr>
-                    <td ><input type="text" name="cell_1_1"></td>
-                    <td><input type="text" name="cell_1_2"></td>
+                    <td ><input type="text" name="cell_1_1_1"></td>
+                    <td><input type="text" name="cell_1_1_2"></td>
                     
                     <!-- Add more cells as needed -->
                   </tr>
                   <tr>
-                    <td><input type="text" name="cell_2_1"></td>
-                    <td><input type="text" name="cell_2_2"></td>
+                    <td><input type="text" name="cell_1_2_1"></td>
+                    <td><input type="text" name="cell_1_2_2"></td>
                     <!-- Add more cells as needed -->
                   </tr>
                   <!-- Add more rows as needed -->
                 </tbody>
             </table>
                 <div id="column-buttons">
-                    <button class="matrix-buttons" onclick="deleteColumn()">-</button>
-                    <button class="matrix-buttons" onclick="addColumn()">+</button>
+                    <button class="matrix-buttons" onclick="deleteColumn(1)">-</button>
+                    <button class="matrix-buttons" onclick="addColumn(1)">+</button>
                 </div>
                 <div id="row-buttons">
-                    <button class="matrix-buttons" onclick="deleteRow()">-</button>
-                    <button class="matrix-buttons" onclick="addRow()">+</button>
+                    <button class="matrix-buttons" onclick="deleteRow(1)">-</button>
+                    <button class="matrix-buttons" onclick="addRow(1)">+</button>
                 </div>
             <div id="right-bracket"></div>
             <div id="right-top-bracket"></div>
             <div id="right-bottom-bracket"></div>
             </div>
         </div>
+
         <div id="matrix-2">
             <div style="position: relative;">
             <div id="left-bracket"></div>
             <div id="left-top-bracket"></div>
             <div id="left-bottom-bracket"></div>
-            <table id="editableGrid">
+            <table id="matrix-2-grid">
                 <tbody>
                   <tr>
-                    <td ><input type="text" name="cell_1_1"></td>
-                    <td><input type="text" name="cell_1_2"></td>
+                    <td ><input type="text" name="cell_2_1_1"></td>
+                    <td><input type="text" name="cell_2_1_2"></td>
                     
                     <!-- Add more cells as needed -->
                   </tr>
                   <tr>
-                    <td><input type="text" name="cell_2_1"></td>
-                    <td><input type="text" name="cell_2_2"></td>
+                    <td><input type="text" name="cell_2_2_1"></td>
+                    <td><input type="text" name="cell_2_2_2"></td>
                     <!-- Add more cells as needed -->
                   </tr>
                   <!-- Add more rows as needed -->
                 </tbody>
             </table>
                 <div id="column-buttons">
-                    <button class="matrix-buttons" onclick="deleteColumn()">-</button>
-                    <button class="matrix-buttons" onclick="addColumn()">+</button>
+                    <button class="matrix-buttons" onclick="deleteColumn(2)">-</button>
+                    <button class="matrix-buttons" onclick="addColumn(2)">+</button>
                 </div>
                 <div id="row-buttons">
-                    <button class="matrix-buttons" onclick="deleteRow()">-</button>
-                    <button class="matrix-buttons" onclick="addRow()">+</button>
+                    <button class="matrix-buttons" onclick="deleteRow(2)">-</button>
+                    <button class="matrix-buttons" onclick="addRow(2)">+</button>
                 </div>
             <div id="right-bracket"></div>
             <div id="right-top-bracket"></div>
