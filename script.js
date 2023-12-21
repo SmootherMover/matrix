@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     for (var i = 0; i < table.rows.length; i++) {
       var cell = table.rows[i].insertCell(-1);
       var input = document.createElement('input');
+      input.class = 'matrix-' + gridnumber;
       input.type = 'text';
       input.name = 'cell_' + gridnumber + '_' + i + '_' + table.rows[i].cells.length;
       cell.appendChild(input);
@@ -30,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function addRow(gridnumber) {
     var table = document.getElementById('matrix-' + gridnumber + '-grid');
     var rowIndex = table.rows.length;
-
+    
     // Add a new row
     var row = table.insertRow(-1);
 
@@ -38,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
     for (var i = 0; i < table.rows[0].cells.length; i++) {
       var cell = row.insertCell(-1);
       var input = document.createElement('input');
+      input.class = 'matrix-' + gridnumber;
       input.type = 'text';
       input.name = 'cell_' + gridnumber + '_'  + rowIndex + '_' + i;
       cell.appendChild(input);
@@ -65,3 +67,13 @@ document.addEventListener('DOMContentLoaded', function() {
       table.deleteRow(-1);
     }
   }
+
+function check(){ 
+  for (let i = 0; i < document.getElementsByClassName("matrix-1").length; i++) {
+    console.log(document.getElementsByClassName("matrix-1")[i].value);
+    console.log(document.getElementsByClassName("matrix-1")[i]);
+    
+  }
+
+
+} ; 
