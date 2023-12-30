@@ -1,3 +1,7 @@
+let matrix_1 = [];
+let matrix_2 = [];
+let proceed = true;
+
 document.addEventListener('DOMContentLoaded', function() {
     const buttons = document.querySelectorAll('.button');
 
@@ -15,51 +19,51 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   function addColumn(gridnumber) {
-    var table = document.getElementById('matrix-' + gridnumber + '-grid');
+    let table = document.getElementById('matrix-' + gridnumber + '-grid');
 
     // Add cells to each existing row
-    for (var i = 0; i < table.rows.length; i++) {
-      var cell = table.rows[i].insertCell(-1);
-      var input = document.createElement('input');
-      input.class = 'matrix-' + gridnumber;
-      input.type = 'text';
+    for (let i = 0; i < table.rows.length; i++) {
+      let cell = table.rows[i].insertCell(-1);
+      let input = document.createElement('input');
+      input.setAttribute("class", 'matrix-' + gridnumber);
+      input.type = 'number';
       input.name = 'cell_' + gridnumber + '_' + i + '_' + table.rows[i].cells.length;
       cell.appendChild(input);
     }
   }
 
   function addRow(gridnumber) {
-    var table = document.getElementById('matrix-' + gridnumber + '-grid');
-    var rowIndex = table.rows.length;
+    let table = document.getElementById('matrix-' + gridnumber + '-grid');
+    let rowIndex = table.rows.length;
     
     // Add a new row
-    var row = table.insertRow(-1);
+    let row = table.insertRow(-1);
 
     // Add cells to the new row
-    for (var i = 0; i < table.rows[0].cells.length; i++) {
-      var cell = row.insertCell(-1);
-      var input = document.createElement('input');
-      input.class = 'matrix-' + gridnumber;
-      input.type = 'text';
+    for (let i = 0; i < table.rows[0].cells.length; i++) {
+      let cell = row.insertCell(-1);
+      let input = document.createElement('input');
+      input.setAttribute("class", 'matrix-' + gridnumber);
+      input.type = 'number';
       input.name = 'cell_' + gridnumber + '_'  + rowIndex + '_' + i;
       cell.appendChild(input);
     }
   }
 
   function deleteColumn(gridnumber) {
-    var table = document.getElementById('matrix-' + gridnumber + '-grid');
+    let table = document.getElementById('matrix-' + gridnumber + '-grid');
 
     // Don't delete if there's only one column
     if (table.rows[0].cells.length > 1) {
       // Remove cells from each existing row
-      for (var i = 0; i < table.rows.length; i++) {
+      for (let i = 0; i < table.rows.length; i++) {
         table.rows[i].deleteCell(-1);
       }
     }
   }
 
   function deleteRow(gridnumber) {
-    var table = document.getElementById('matrix-' + gridnumber + '-grid');
+    let table = document.getElementById('matrix-' + gridnumber + '-grid');
 
     // Don't delete if there's only one row
     if (table.rows.length > 1) {
@@ -69,11 +73,30 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
 function check(){ 
-  for (let i = 0; i < document.getElementsByClassName("matrix-1").length; i++) {
-    console.log(document.getElementsByClassName("matrix-1")[i].value);
-    console.log(document.getElementsByClassName("matrix-1")[i]);
-    
+  matrix_1 = [];
+  matrix_2 = [];
+  for (let i = 0; i < document.getElementsByClassName("matrix-1").length; i++) { 
+    if(document.getElementsByClassName("matrix-2")[i].value == ""){
+      error();
+      return proceed = false;
+    }
+    matrix_1.push(parseInt(document.getElementsByClassName("matrix-1")[i].value));
+  }  
+  for (let i = 0; i < document.getElementsByClassName("matrix-2").length; i++) {
+    if(document.getElementsByClassName("matrix-2")[i].value == ""){
+      error();
+      return proceed = false;
+    }
+    matrix_2.push(parseInt(document.getElementsByClassName("matrix-2")[i].value));
+
   }
 
+ 
+}; 
 
-} ; 
+
+
+
+
+
+

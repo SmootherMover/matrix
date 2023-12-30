@@ -7,89 +7,20 @@
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.8.0/lib/p5.js"></script>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
+    <script src="addition.js"></script>
 </head>
 <body>
    <div id="title-div"><img id="matrix-icon" src="https://cdn-icons-png.flaticon.com/512/4872/4872162.png"><p id="title">Matrix Calculator</p></div>
    <div id="operation-selector">
-        <button class="button">Addition</button>
-        <button class="button">Subtraction</button>
-        <button class="button">Dot Product</button>
-        <button class="button">Cross Product</button>
-        <button class="button">Determinant</button>
+        <button class="button" onclick="addition()">Addition</button>
+        <button class="button" onclick="subtraction()">Subtraction</button>
+        <button class="button" onclick="dot_product()">Dot Product</button>
+        <button class="button" onclick="cross_product()">Cross Product</button>
+        <button class="button" onclick="determinant()">Determinant</button>
    </div>
    <div id="main-content">
-        <div id="matrix-1">
-            <div style="position: relative;">
-            <div id="left-bracket"></div>
-            <div id="left-top-bracket"></div>
-            <div id="left-bottom-bracket"></div>
-            <table id="matrix-1-grid">
-                <tbody>
-                  <tr>
-                    <td><input type="text" class="matrix-1" name="cell_1_1_1" value="1"></td>
-                    <td><input type="text" class="matrix-1" name="cell_1_1_2"  value="2"></td>
-                    
-                    <!-- Add more cells as needed -->
-                  </tr>
-                  <tr>
-                    <td><input type="text" class="matrix-1" name="cell_1_2_1"  value="3"></td>
-                    <td><input type="text" class="matrix-1" name="cell_1_2_2" value="4"></td>
-                    <!-- Add more cells as needed -->
-                  </tr>
-                  <!-- Add more rows as needed -->
-                </tbody>
-            </table>
-                <div id="column-buttons">
-                    <button class="matrix-buttons" onclick="deleteColumn(1)">-</button>
-                    <button class="matrix-buttons" onclick="addColumn(1)">+</button>
-                </div>
-                <div id="row-buttons">
-                    <button class="matrix-buttons" onclick="deleteRow(1)">-</button>
-                    <button class="matrix-buttons" onclick="addRow(1)">+</button>
-                </div>
-            <div id="right-bracket"></div>
-            <div id="right-top-bracket"></div>
-            <div id="right-bottom-bracket"></div>
-            </div>
-        </div>
-
-        <div id="matrix-2">
-            <div style="position: relative;">
-            <div id="left-bracket"></div>
-            <div id="left-top-bracket"></div>
-            <div id="left-bottom-bracket"></div>
-            <table id="matrix-2-grid">
-                <tbody>
-                  <tr>
-                    <td><input type="text" class="matrix-2" name="cell_2_1_1"></td>
-                    <td><input type="text" class="matrix-2" name="cell_2_1_2"></td>
-                    
-                    <!-- Add more cells as needed -->
-                  </tr>
-                  <tr>
-                    <td><input type="text" class="matrix-2" name="cell_2_2_1"></td>
-                    <td><input type="text" class="matrix-2" name="cell_2_2_2"></td>
-                    <!-- Add more cells as needed -->
-                  </tr>
-                  <!-- Add more rows as needed -->
-                </tbody>
-            </table>
-                <div id="column-buttons">
-                    <button class="matrix-buttons" onclick="deleteColumn(2)">-</button>
-                    <button class="matrix-buttons" onclick="addColumn(2)">+</button>
-                </div>
-                <div id="row-buttons">
-                    <button class="matrix-buttons" onclick="deleteRow(2)">-</button>
-                    <button class="matrix-buttons" onclick="addRow(2)">+</button>
-                </div>
-            <div id="right-bracket"></div>
-            <div id="right-top-bracket"></div>
-            <div id="right-bottom-bracket"></div>
-            </div>
-        </div>
-        
-       <button onclick="check()">CHECK</button> 
+       PLEASE SELECT A OPERATION 
    </div>
 
 </body>

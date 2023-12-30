@@ -43,19 +43,24 @@ body{
 
 #main-content{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     height: 100vh;
     width: 100vw;
     
 }
 
-#matrix-1, #matrix-2{
+#matrix-1, #matrix-2, #resultant-matrix{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 75vw;
     height: 75vh;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 table{
@@ -79,9 +84,6 @@ input{
  
 }
 
-button{
-  margin-top: 10px;
-}
 
 #column-buttons{
     display: flex;
@@ -150,9 +152,19 @@ button{
     width: 15px;
     right: -5px;
     bottom: -5px;
-}
+} 
 
 .matrix-buttons{
     width: 25px;
     margin: 1px;
+}
+
+#operator-symbol{ 
+    font-weight: bold;
+    font-size: 40px;
+}
+
+#equal{
+    font-weight: bold;
+    font-size: 40px;
 }
