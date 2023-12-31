@@ -1,6 +1,8 @@
 let matrix_1 = [];
 let matrix_2 = [];
+let matrix_columns = [];
 let proceed = true;
+
 
 document.addEventListener('DOMContentLoaded', function() {
     const buttons = document.querySelectorAll('.button');
@@ -25,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
     for (let i = 0; i < table.rows.length; i++) {
       let cell = table.rows[i].insertCell(-1);
       let input = document.createElement('input');
-      input.setAttribute("class", 'matrix-' + gridnumber);
+      input.classList.add('matrix-' + gridnumber);
       input.type = 'number';
       input.name = 'cell_' + gridnumber + '_' + i + '_' + table.rows[i].cells.length;
       cell.appendChild(input);
@@ -47,7 +49,9 @@ document.addEventListener('DOMContentLoaded', function() {
       input.type = 'number';
       input.name = 'cell_' + gridnumber + '_'  + rowIndex + '_' + i;
       cell.appendChild(input);
+     
     }
+    
   }
 
   function deleteColumn(gridnumber) {
@@ -60,6 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
         table.rows[i].deleteCell(-1);
       }
     }
+
   }
 
   function deleteRow(gridnumber) {
@@ -91,8 +96,35 @@ function check(){
 
   }
 
- 
-}; 
+
+}
+ function vertical_loop() {
+  let table = document.getElementById("matrix-2-grid");
+  
+  // Check if the table exists
+  
+
+      // Loop through each column
+      matrix_columns = [];
+      
+      // Loop through each column
+      for (let i = 0; i < table.rows[0].cells.length; i++) {
+  
+        // Loop through each row in the current column
+        for (let j = 0; j < table.rows.length; j++) {
+          // Get the input element in the cell
+          let inputElement = table.rows[j].cells[i].querySelector('input');
+
+          // Get the value of the input element
+          let cellValue = inputElement ? inputElement.value : '';
+
+          matrix_columns.push(cellValue);
+        }
+
+        // Output the values of the current column
+     
+      }  
+};
 
 
 

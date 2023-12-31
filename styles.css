@@ -43,7 +43,7 @@ body{
 
 #main-content{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around; 
     align-items: center;
     height: 100vh;
     width: 100vw;
@@ -167,4 +167,10 @@ input{
 #equal{
     font-weight: bold;
     font-size: 40px;
+}
+
+#dot-product-answer{
+    font-weight: bold;
+    font-size: 40px;
+    text-decoration: underline;
 }
