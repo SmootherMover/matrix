@@ -86,7 +86,7 @@ function check(){
       return proceed = false;
     }
     matrix_1.push(parseInt(document.getElementsByClassName("matrix-1")[i].value));
-    console.log(matrix_1);
+
   }  
   for (let i = 0; i < document.getElementsByClassName("matrix-2").length; i++) {
     if(document.getElementsByClassName("matrix-2")[i].value == ""){
