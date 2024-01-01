@@ -109,6 +109,15 @@ input{
     background-color: black;
 }
 
+#left-bracket-det{
+    position: absolute;
+    height: 110%;
+    width: 5px;
+    left: -5px;
+    top: -5px;
+    background-color: black;
+}
+
 #left-top-bracket{
     position: absolute;
     background-color: black;
@@ -132,6 +141,16 @@ input{
     right: -5px;
     top: 0;
     height: 100%;
+    width:5px;
+    background-color: black;
+}
+
+
+#right-bracket-det{
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    height: 110%;
     width:5px;
     background-color: black;
 }

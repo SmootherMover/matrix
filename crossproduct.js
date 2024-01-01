@@ -8,14 +8,14 @@ function cross_product(){
     <table id="matrix-1-grid">
         <tbody>
           <tr>
-            <td><input type="number" class="matrix-1" name="cell_1_1_1" value="1"></td>
-            <td><input type="number" class="matrix-1" name="cell_1_1_2"  value="2"></td>
+            <td><input type="number" class="matrix-1" name="cell_1_1_1" value=""></td>
+            <td><input type="number" class="matrix-1" name="cell_1_1_2" value=""></td>
             
             <!-- Add more cells as needed -->
           </tr>
           <tr>
-            <td><input type="number" class="matrix-1" name="cell_1_2_1"  value="3"></td>
-            <td><input type="number" class="matrix-1" name="cell_1_2_2" value="4"></td>
+            <td><input type="number" class="matrix-1" name="cell_1_2_1" value=""></td>
+            <td><input type="number" class="matrix-1" name="cell_1_2_2" value=""></td>
             <!-- Add more cells as needed -->
           </tr>
           <!-- Add more rows as needed -->
@@ -45,13 +45,13 @@ function cross_product(){
     <table id="matrix-2-grid">
         <tbody>
           <tr>
-            <td><input type="number" class="matrix-2" name="cell_2_1_1" value="1"></td>
-            <td><input type="number" class="matrix-2" name="cell_2_1_2" value="2"></td>
+            <td><input type="number" class="matrix-2" name="cell_2_1_1" value=""></td>
+            <td><input type="number" class="matrix-2" name="cell_2_1_2" value=""></td>
             <!-- Add more cells as needed -->
           </tr>
           <tr>
-            <td><input type="number" class="matrix-2" name="cell_2_2_1" value="3"></td>
-            <td><input type="number" class="matrix-2" name="cell_2_2_2" value="4"></td>
+            <td><input type="number" class="matrix-2" name="cell_2_2_1" value=""></td>
+            <td><input type="number" class="matrix-2" name="cell_2_2_2" value=""></td>
             <!-- Add more cells as needed -->
           </tr>
           <!-- Add more rows as needed -->
@@ -104,23 +104,22 @@ function cross_product(){
 };
 
 function crossproduct(){
-    let rows1 = document.getElementById("matrix-1-grid").rows.length;
-    let cols1 = document.getElementById("matrix-1-grid").rows[0].cells.length
-    let cols2 = document.getElementById("matrix-2-grid").rows[0].cells.length;
-    let resultant = [];
-    for (let i = 0; i < rows1; i++) {
-      resultant[i] = [];
-      for (let j = 0; j < cols2; j++) {
-          resultant[i][j] = 0;
-        for (let k = 0; k < cols1; k++) {
-          resultant[i][j] += matrix_1[i * cols1 + k] * matrix_2[k * cols2 + j];
-        }
+  let rows1 = document.getElementById("matrix-1-grid").rows.length;
+  let cols1 = document.getElementById("matrix-1-grid").rows[0].cells.length
+  let cols2 = document.getElementById("matrix-2-grid").rows[0].cells.length;
+  let resultant = [];
+  for (let i = 0; i < rows1; i++) {
+    for (let j = 0; j < cols2; j++) {
+      let sum = 0;
+      for (let k = 0; k < cols1; k++) {
+        sum += matrix_1[i * cols1 + k] * matrix_2[k * cols2 + j];
       }
-    }   
-
-    console.log(resultant);
-//   resultant.push(matrix_1[i] * matrix_columns[i]);
-// console.log(document.getElementById("matrix-2-grid").rows[i].cells.length);
-      
-  };
+      resultant.push(sum);
+    }
+  }
+  for (let l = 0; l < resultant.length; l++) {
+    document.getElementsByClassName("matrix-3")[l].value = resultant[l];
+    
+  }    
+};
 

@@ -7,12 +7,12 @@ function dot_product(){
     <table id="matrix-1-grid">
         <tbody>
           <tr>
-            <td><input type="number" class="matrix-1" name="cell_1_1_1" value="1"></td>
+            <td><input type="number" class="matrix-1" name="cell_1_1_1" value=""></td>
           
             <!-- Add more cells as needed -->
           </tr>
           <tr>
-            <td><input type="number" class="matrix-1" name="cell_1_2_1"  value="3"></td>
+            <td><input type="number" class="matrix-1" name="cell_1_2_1"  value=""></td>
            
             <!-- Add more cells as needed -->
           </tr>
@@ -39,8 +39,8 @@ function dot_product(){
     <table id="matrix-2-grid">
         <tbody>
           <tr>
-            <td><input type="number" class="matrix-2" name="cell_2_1_1" value="1"></td>
-            <td><input type="number" class="matrix-2" name="cell_2_1_2" value="2"></td>
+            <td><input type="number" class="matrix-2" name="cell_2_1_1" value=""></td>
+            <td><input type="number" class="matrix-2" name="cell_2_1_2" value=""></td>
             <!-- Add more cells as needed -->
           </tr>
           <!-- Add more rows as needed -->
