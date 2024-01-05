@@ -1,5 +1,5 @@
-function subtraction(){
-    document.getElementById("main-content").innerHTML = ` <div id="matrix-1">
+function subtraction() {
+  document.getElementById("main-content").innerHTML = ` <div id="matrix-1">
     <div style="position: relative;">
     <div id="left-bracket"></div>
     <div id="left-top-bracket"></div>
@@ -100,16 +100,14 @@ function subtraction(){
   </div>
   </div>
   `;
-  
-  
-  };
+}
 
-function subtract(){
-    console.log(proceed);
-    if(proceed){
-      for(let i = 0; i < matrix_1.length; i++){
-      document.getElementsByClassName("matrix-3")[i].value = (matrix_1[i] - matrix_2[i]);
-      }
-    };
-
+function subtract() {
+  console.log(proceed);
+  if (proceed) {
+    for (let i = 0; i < matrix_1.length; i++) {
+      document.getElementsByClassName("matrix-3")[i].value =
+        matrix_1[i] - matrix_2[i];
+    }
+  }
 }

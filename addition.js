@@ -1,5 +1,5 @@
-function addition(){
-    document.getElementById("main-content").innerHTML = ` <div id="matrix-1">
+function addition() {
+  document.getElementById("main-content").innerHTML = ` <div id="matrix-1">
     <div style="position: relative;">
     <div id="left-bracket"></div>
     <div id="left-top-bracket"></div>
@@ -18,7 +18,7 @@ function addition(){
             <!-- Add more cells as needed -->
           </tr>
           <!-- Add more rows as needed -->
-        </tbody>
+        </tbody> 
     </table>
     <div id="column-buttons">
     <button class="matrix-buttons" onclick="deleteColumn(1); deleteColumn(2); deleteColumn(3)">-</button>
@@ -100,16 +100,14 @@ function addition(){
   </div>
   </div>
   `;
-  
-  
-  };
+}
 
-function add(){
-    console.log(proceed);
-    if(proceed){
-      for(let i = 0; i < matrix_1.length; i++){
-      document.getElementsByClassName("matrix-3")[i].value = (matrix_1[i] + matrix_2[i]);
-      }
-    };
-
+function add() {
+  console.log(proceed);
+  if (proceed) {
+    for (let i = 0; i < matrix_1.length; i++) {
+      document.getElementsByClassName("matrix-3")[i].value =
+        matrix_1[i] + matrix_2[i];
+    }
+  }
 }

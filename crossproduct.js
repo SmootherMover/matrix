@@ -1,6 +1,5 @@
-function cross_product(){
-    document.getElementById("main-content").innerHTML = 
-    ` <div id="matrix-1">
+function cross_product() {
+  document.getElementById("main-content").innerHTML = ` <div id="matrix-1">
     <div style="position: relative;">
     <div id="left-bracket"></div>
     <div id="left-top-bracket"></div>
@@ -101,11 +100,11 @@ function cross_product(){
   
   </div>
   `;
-};
+}
 
-function crossproduct(){
+function crossproduct() {
   let rows1 = document.getElementById("matrix-1-grid").rows.length;
-  let cols1 = document.getElementById("matrix-1-grid").rows[0].cells.length
+  let cols1 = document.getElementById("matrix-1-grid").rows[0].cells.length;
   let cols2 = document.getElementById("matrix-2-grid").rows[0].cells.length;
   let resultant = [];
   for (let i = 0; i < rows1; i++) {
@@ -119,7 +118,5 @@ function crossproduct(){
   }
   for (let l = 0; l < resultant.length; l++) {
     document.getElementsByClassName("matrix-3")[l].value = resultant[l];
-    
-  }    
-};
-
+  }
+}
