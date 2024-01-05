@@ -106,4 +106,3 @@ function vertical_loop() {
 }
 
 
-let addition = new Addition();
